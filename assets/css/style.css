@@ -1,0 +1,17 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
+@import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome|zocial);
+
+body {
+    background-color: rgb(18,18,20);
+} .alanlindo  {
+    display: flex;
+    margin-top: 5%;
+    justify-content: center;
+    font-family: 'arial';
+    color: white;
+} .alanlindo2  {
+    display: flex;
+    justify-content: center;
+    font-family: 'arial';
+    color: rgb(130,87,230);
+}
