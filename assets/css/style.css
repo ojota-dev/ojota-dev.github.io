@@ -1,97 +1,274 @@
-@import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
-@import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome|zocial);
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
 
 body {
-    background-color: rgb(18,18,20);
-} .alanlindo  {
-    display: flex;
-    margin-top: 5%;
-    font-size: 300%;
-    justify-content: center;
-    font-family: 'arial';
-    color: white;
-} .alanlindo2  {
-    display: flex;
-    justify-content: center;
-    font-size: 100%;
-    font-family: 'arial';
-    color: rgb(130,87,230);
-} .cards-list {
-    z-index: 0;
-    margin-top: 5%;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  overflow: hidden;
+  background: #000;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: 0px;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+          transform: translateX(-50%) translateY(-50%);
+}
+
+.glitch {
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  -webkit-animation: shake .4s infinite;
+          animation: shake .4s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.glitch_fixed {
+  font-size: 30px;
+  text-align: center;
+  position: relative;
+  color: #EEEEEE;
+  -webkit-animation: color .4s infinite;
+          animation: color .4s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.glitch_opacity {
+  font-size: 0px;
+  text-align: center;
+  position: relative;
+  color: #EEEEEE;
+  position: absolute;
+  top: 0;
+  left: -2px;
+  -webkit-animation: show .2s infinite;
+          animation: show .2s infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+.glitch_opacity span {
+  color: #F802F8;
+}
+
+@-webkit-keyframes show {
+  50% {
+    opacity: 0;
+    text-shadow: 2px 2px #AAE90E;
   }
-  
-  .card {
-    margin: 30px auto;
-    width: 220px;
-    height: 220px;
-    border-radius: 40px;
-  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-    cursor: pointer;
-    transition: 0.4s;
+}
+
+@keyframes show {
+  50% {
+    opacity: 0;
+    text-shadow: 2px 2px #AAE90E;
   }
-  
-  .card .card_image {
-    width: inherit;
-    height: inherit;
-    border-radius: 40px;
+}
+@-webkit-keyframes color {
+  50% {
+    color: #b1b1b1;
   }
-  
-  .card .card_image img {
-    width: inherit;
-    height: inherit;
-    border-radius: 40px;
-    object-fit: cover;
+}
+@keyframes color {
+  50% {
+    color: #b1b1b1;
   }
-  
-  .card .card_title {
-    text-align: center;
-    border-radius: 0px 0px 40px 40px;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    margin-top: -80px;
-    height: 40px;
+}
+@-webkit-keyframes shake {
+  0% {
+    -webkit-transform: translate(2px, 1px) rotate(0deg);
+            transform: translate(2px, 1px) rotate(0deg);
   }
-  
-  .card:hover {
-    transform: scale(0.9, 0.9);
-    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), 
-      -5px -5px 30px 15px rgba(0,0,0,0.22);
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            transform: translate(-1px, -2px) rotate(-1deg);
   }
-  
-  .title-white {
-    color: white;
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            transform: translate(-3px, 0px) rotate(1deg);
   }
-  
-  .title-black {
-    color: black;
+  30% {
+    -webkit-transform: translate(0px, 2px) rotate(0deg);
+            transform: translate(0px, 2px) rotate(0deg);
   }
-  
-  @media all and (max-width: 500px) {
-    .card-list {
-      /* On small screens, we are no longer using row direction but column */
-      flex-direction: column;
-    }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+            transform: translate(1px, -1px) rotate(1deg);
   }
-  
-  
-  /*
-  .card {
-    margin: 30px auto;
-    width: 300px;
-    height: 300px;
-    border-radius: 40px;
-    background-image: url('https://i.redd.it/b3esnz5ra34y.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-repeat: no-repeat;
-  box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-    transition: 0.4s;
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            transform: translate(-1px, 2px) rotate(-1deg);
   }
-  */
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(2px, 1px) rotate(-1deg);
+            transform: translate(2px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(2px, 2px) rotate(0deg);
+            transform: translate(2px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+@keyframes shake {
+  0% {
+    -webkit-transform: translate(2px, 1px) rotate(0deg);
+            transform: translate(2px, 1px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
+            transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    -webkit-transform: translate(-3px, 0px) rotate(1deg);
+            transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    -webkit-transform: translate(0px, 2px) rotate(0deg);
+            transform: translate(0px, 2px) rotate(0deg);
+  }
+  40% {
+    -webkit-transform: translate(1px, -1px) rotate(1deg);
+            transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
+            transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    -webkit-transform: translate(-3px, 1px) rotate(0deg);
+            transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    -webkit-transform: translate(2px, 1px) rotate(-1deg);
+            transform: translate(2px, 1px) rotate(-1deg);
+  }
+  80% {
+    -webkit-transform: translate(-1px, -1px) rotate(1deg);
+            transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    -webkit-transform: translate(2px, 2px) rotate(0deg);
+            transform: translate(2px, 2px) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(1px, -2px) rotate(-1deg);
+            transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.span, .glitch span:first-child, .glitch span:nth-child(2), .glitch span:nth-child(3), .glitch span:nth-child(4), .glitch span:nth-child(5), .glitch span:nth-child(6), .glitch span:nth-child(7), .glitch span:nth-child(8) {
+  color: #0301FA;
+  -webkit-animation: glitch .4s linear infinite;
+          animation: glitch .4s linear infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  position: absolute;
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+}
+
+.glithc span {
+  position: absolute;
+}
+
+.glitch span:first-child {
+  left: 0;
+}
+
+.glitch span:nth-child(2) {
+  left: 25px;
+}
+
+.glitch span:nth-child(3) {
+  left: 50px;
+}
+
+.glitch span:nth-child(4) {
+  left: 75px;
+}
+
+.glitch span:nth-child(5) {
+  left: 100px;
+}
+
+.glitch span:nth-child(6) {
+  left: 125px;
+}
+
+.glitch span:nth-child(7) {
+  left: 150px;
+}
+
+.glitch span:nth-child(8) {
+  left: 175px;
+}
+
+@-webkit-keyframes glitch {
+  0% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  50% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    color: #01FA01;
+  }
+  100% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+    color: #FA0103;
+    clip: rect(40px, 0px, 40px, 0px);
+  }
+}
+
+@keyframes glitch {
+  0% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+    -webkit-transform: translateX(-5%);
+            transform: translateX(-5%);
+  }
+  50% {
+    -webkit-transform: translateY(-10%);
+            transform: translateY(-10%);
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+    color: #01FA01;
+  }
+  100% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+    -webkit-transform: translateX(5%);
+            transform: translateX(5%);
+    color: #FA0103;
+    clip: rect(40px, 0px, 40px, 0px);
+  }
+}
